@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DED EYE Inc Laning Page</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo"></h2>
+            <div class="toggle"></div>
+        </header>
+        <video src="Dependencies/ROTR_Boss_demo_001.m4v" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>DED EYE Inc.</h2>
+            <h3>Creativity is our thing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Harum quasi veritatis corporis voluptatum nam architecto 
+            aliquam unde iure quibusdam est?</p>
+            <a href="#">SEE OUR SHOWREELS</a>
+        </div>
+        <ul class="social">
+            <li><a href=""></a><img src="btn_icon_sns_facebook.png" alt=""></a></li>
+            <li><a href=""></a><img src="btn_icon_sns_linkedin.png" alt=""></a></li>
+            <li><a href=""></a><img src="btn_icon_sns_youtube.png" alt=""></a></li>
+            <li><a href=""></a><img src="btn_icon_sns_pinterest.png" alt=""></a></li>
+            <li><a href=""></a><img src="btn_icon_sns_instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Reels</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Join Us</a></li>
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>

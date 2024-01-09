@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>DED EYE Inc Laning Page</title>
+    <title>DED EYE Inc.</title>
 </head>
 <body>
     <section class="showcase">
@@ -13,28 +12,30 @@
             <h2 class="logo"></h2>
             <div class="toggle"></div>
         </header>
-        <video src="../Dependencies/ROTR_Boss_demo_001.m4v" muted loop autoplay></video>
+        <video src="https://github.com/dedeyeinc/dedeyeinc.github.io/blob/e0564944f3b9886c673038eb20c985dc3f31027e/Dependencies/ROTR_Boss_demo_001.m4v?raw=true" muted loop autoplay></video>
 
         <div class="overlay"></div>
 
         <div class="text">
             <h2>DED EYE Inc.</h2>
             <h3>Creativity is our thing</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Harum quasi veritatis corporis voluptatum nam architecto 
-            aliquam unde iure quibusdam est?</p>
+            <p>We strive to bring creative quality forward. This is what we do, this is our mark on the world.</p>
             <a href="#">SEE OUR SHOWREELS</a>
         </div>
-        <ul class="social">
-            <li><a href=""></a><img src="../Dependencies/btn_icon_sns_facebook.png" alt=""></a></li>
-            <li><a href=""></a><img src="../Dependencies/btn_icon_sns_linkedin.png" alt=""></a></li>
-            <li><a href=""></a><img src="../Dependencies/btn_icon_sns_youtube.png" alt=""></a></li>
-            <li><a href=""></a><img src="../Dependencies/btn_icon_sns_pinterest.png" alt=""></a></li>
-            <li><a href=""></a><img src="../Dependencies/btn_icon_sns_instagram.png" alt=""></a></li>
-        </ul>
+        
     </section>
 
-    <div class="menu">
+    <div class="wrapper">
+        <ul class="social">
+            <li><a href="https://www.facebook.com/dedeyeinc" target="_blank"><img src="https://github.com/dedeyeinc/dedeyeinc.github.io/blob/e0564944f3b9886c673038eb20c985dc3f31027e/Dependencies/btn_icon_sns_facebook.png?raw=true" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/company/ded-eye-inc/" target="_blank"><img src="https://github.com/dedeyeinc/dedeyeinc.github.io/blob/e0564944f3b9886c673038eb20c985dc3f31027e/Dependencies/btn_icon_sns_linkedin.png?raw=true" alt=""></a></li>
+            <li><a href="https://www.youtube.com/@dedeyeinc" target="_blank"><img src="https://github.com/dedeyeinc/dedeyeinc.github.io/blob/e0564944f3b9886c673038eb20c985dc3f31027e/Dependencies/btn_icon_sns_youtube.png?raw=true" alt=""></a></li>
+            <li><a href="https://www.pinterest.ca/DEDEYEInc/" target="_blank"><img src="https://github.com/dedeyeinc/dedeyeinc.github.io/blob/e0564944f3b9886c673038eb20c985dc3f31027e/Dependencies/btn_icon_sns_pinterest.png?raw=true" alt=""></a></li>
+            <li><a href="https://www.instagram.com/ded_eye_inc/" target="_blank"><img src="https://github.com/dedeyeinc/dedeyeinc.github.io/blob/e0564944f3b9886c673038eb20c985dc3f31027e/Dependencies/btn_icon_sns_instagram.png?raw=true" alt=""></a></li>
+        </ul>
+    </div>
+    
+    <div class="menu" id="menu">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Reels</a></li>
@@ -44,13 +45,257 @@
         </ul>
     </div>
     <script>
-        const menuToggle = document.querySelector('.toggle')
+        const menu = document.querySelector('.menu')
+        const toggle = document.querySelector('.toggle')
         const showcase = document.querySelector('.showcase')
+        const overlay = document.querySelector('.overlay')
 
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active')
-            showcase.classList.toggle('active')
+        toggle.addEventListener('click', function () {
+            toggle.classList.toggle('active')
+            menu.classList.toggle('active')
+            overlay.classList.toggle('active')
         })
     </script>
 </body>
 </html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --overlay-color: rgba(30, 26, 46, 0.5);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 80px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-transform: uppercase;
+    width: 200px;
+    height: 200px;
+    padding-bottom: 10px;
+    background: url("https://github.com/dedeyeinc/dedeyeinc.github.io/blob/a911fc74e297a166a5e749f96cb04aee07c45a9e/Dependencies/dei-logo-white.png?raw=true");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url("https://github.com/dedeyeinc/dedeyeinc.github.io/blob/a911fc74e297a166a5e749f96cb04aee07c45a9e/Dependencies/menu.png?raw=true");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    margin:0px;
+    z-index: 4;
+    right: 0px;
+    transition: right .5s ease;
+    white-space: nowrap;
+}
+
+.toggle.active {
+    background: url('https://github.com/dedeyeinc/dedeyeinc.github.io/blob/a911fc74e297a166a5e749f96cb04aee07c45a9e/Dependencies/exit.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    right: 200px;
+    z-index: 4;
+    transition: right .5s ease;
+    white-space: nowrap
+}
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: ease 0.5s;
+    mix-blend-mode: overlay;
+}
+
+.overlay.active{
+    background-color: var(--overlay-color);
+    transition: ease 0.5s;
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+}
+
+.text h2 {
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h3 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.text a {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.text a:hover {
+    letter-spacing: 6px;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    right: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    margin-right: 5px;
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+
+.social li a:hover {
+    transform: scale(0.8) translateY(-15px);
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    background-color: white;
+    opacity: 70%;
+    overflow: hidden;
+    transition: width .5s ease;
+    white-space: nowrap;
+}
+
+.menu.active{
+    width:200px;
+}
+.menu ul {
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+
+.menu ul li{
+    width: 100%;
+}
+
+.menu ul li:hover{
+    background-color: rgba(147, 147, 147, 0.6);
+
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #292929;
+    margin: 25%;
+}
+
+.menu ul li a:hover {
+    color: #000000;
+}
+
+@media (max-width: 798px){
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .text h2 {
+        font-size: 3em;
+    }
+
+    .text h3 {
+        font-size: 2em;
+    }
+}
+
+</style>

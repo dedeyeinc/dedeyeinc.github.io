@@ -3,6 +3,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import GUI from 'lil-gui'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
+import png from '/textures/matcaps/8.png'
+import helvetiker from '/fonts/helvetiker_regular.typeface.json'
 
 /**
  * Base
@@ -24,14 +26,14 @@ const scene = new THREE.Scene()
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
-const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
+const matcapTexture = textureLoader.load(png)
 matcapTexture.colorSpace = THREE.SRGBColorSpace
 
 // Fonts
 const fontLoader = new FontLoader()
 const material = new THREE.MeshMatcapMaterial({matcap: matcapTexture})
 fontLoader.load(
-    '/fonts/helvetiker_regular.typeface.json', (font) =>
+    helvetiker, (font) =>
     {
         const textGeo = new TextGeometry(
             'Mathias Villalobos - Creative Developer',

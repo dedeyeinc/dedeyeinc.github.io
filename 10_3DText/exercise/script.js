@@ -1,8 +1,8 @@
-import * as THREE from 'https://unpkg.com/three@0.161.0/build/three.cjs'
-import { OrbitControls } from 'https://dedeyeinc.github.io/10_3DText/ThreeJS/three/examples/jsm/controls/OrbitControls.js'
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import GUI from 'lil-gui'
-import { FontLoader } from 'https://dedeyeinc.github.io/10_3DText/ThreeJS/three/examples/jsm/loaders/FontLoader.js'
-import { TextGeometry } from 'https://dedeyeinc.github.io/10_3DText/ThreeJS/three/examples/jsm/geometries/TextGeometry.js'
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 
 /**
  * Base
@@ -24,7 +24,7 @@ const scene = new THREE.Scene()
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
-const matcapTexture = textureLoader.load('https://dedeyeinc.github.io/10_3DText/ThreeJS/textures/matcaps/8.png')
+const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
 matcapTexture.colorSpace = THREE.SRGBColorSpace
 
 // Fonts

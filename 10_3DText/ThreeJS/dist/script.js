@@ -1,4 +1,4 @@
-import * as THREE from 'https://dedeyeinc.github.io/10_3DText/ThreeJS/node_modules/three'
+import * as THREE from 'https://unpkg.com/three@0.161.0/build/three.cjs'
 import { OrbitControls } from 'https://dedeyeinc.github.io/10_3DText/ThreeJS/three/examples/jsm/controls/OrbitControls.js'
 import GUI from 'lil-gui'
 import { FontLoader } from 'https://dedeyeinc.github.io/10_3DText/ThreeJS/three/examples/jsm/loaders/FontLoader.js'

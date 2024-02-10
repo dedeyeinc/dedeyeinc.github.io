@@ -4,7 +4,6 @@ import GUI from 'lil-gui'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 import png from './textures/matcaps/8.png'
-//import helvetiker from './fonts/helvetiker_regular.typeface.json'
 
 /**
  * Base
@@ -66,6 +65,7 @@ fontLoader.load(
  * Object
  */
 const donutGeo = new THREE.TorusGeometry(.3,.2,20,45)
+var array = []
 for(let i = 0; i < 200; i++){
     const donut = new THREE.Mesh (donutGeo,material)
     donut.position.x = (Math.random() - 0.5) * 30
@@ -77,6 +77,7 @@ for(let i = 0; i < 200; i++){
 
     const scale = Math.random()
     donut.scale.set(scale,scale,scale)
+    array.push(donut)
 
     scene.add(donut)
     
@@ -111,6 +112,9 @@ window.addEventListener('resize', () =>
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
+for(let i = 0; i < array.length; i++){
+    console.log(i)
+}
 
 /**
  * Camera
@@ -143,7 +147,11 @@ const clock = new THREE.Clock()
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
-
+    // update donuts
+    for(let i = 0; i < array.length; i++){
+        array[i].rotation.x += (Math.random()*0.01)
+        array[i].rotation.y += (Math.random()*0.01)
+    }
     // Update controls
     controls.update()
 

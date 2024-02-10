@@ -112,9 +112,6 @@ window.addEventListener('resize', () =>
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
-for(let i = 0; i < array.length; i++){
-    console.log(i)
-}
 
 /**
  * Camera

@@ -32,7 +32,7 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 const fontLoader = new FontLoader()
 const material = new THREE.MeshMatcapMaterial({matcap: matcapTexture})
 fontLoader.load(
-    'https://github.com/dedeyeinc/dedeyeinc.github.io/blob/208301c7d298ccd27226d814f645a991ca6d7be2/Dependencies/fonts/helvetiker_regular.typeface.json', (font) =>
+    './Dependencies/fonts/helvetiker_regular.typeface.json', (font) =>
     {
         const textGeo = new TextGeometry(
             'Mathias Villalobos - Creative Developer',

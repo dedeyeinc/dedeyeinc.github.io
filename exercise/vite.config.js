@@ -9,7 +9,7 @@ export default {
     },
     build:
     {
-        outDir: 'D:/DEI_depot/dedeyeinc.github.io/ThreeJS', // Output in the dist/ folder
+        outDir: '../ThreeJS', // Output in the dist/ folder
         emptyOutDir: true, // Empty the folder first
         sourcemap: true // Add sourcemap
     },

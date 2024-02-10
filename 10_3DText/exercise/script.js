@@ -4,7 +4,6 @@ import GUI from 'lil-gui'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 import png from './textures/matcaps/8.png'
-import helvetiker from './fonts/helvetiker_regular.typeface.json'
 
 /**
  * Base
@@ -33,7 +32,7 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 const fontLoader = new FontLoader()
 const material = new THREE.MeshMatcapMaterial({matcap: matcapTexture})
 fontLoader.load(
-    helvetiker, (font) =>
+    './fonts/helvetiker_regular.typeface.json', (font) =>
     {
         const textGeo = new TextGeometry(
             'Mathias Villalobos - Creative Developer',
